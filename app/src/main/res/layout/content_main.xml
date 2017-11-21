@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_300"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/header_gradient">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_centerInParent="true"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ballance"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/pum"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/ballance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Rp 0"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <!-- Bottom Sheet -->
+    <include layout="@layout/bottom_sheets_main" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_add"
+        tools:ignore="VectorDrawableCompat" />
+</android.support.design.widget.CoordinatorLayout>
