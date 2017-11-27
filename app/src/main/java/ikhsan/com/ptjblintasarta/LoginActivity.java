@@ -38,11 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TextView tvCopyright = (TextView)findViewById(R.id.copyright);
-        int year = Calendar.getInstance().get(Calendar.YEAR);
-        tvCopyright.setText("@"+year+" PT. Aplikanusa Lintasarta");
-
-
         if(isSessionLogin()) {
             Intent i = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(i);
@@ -58,11 +53,15 @@ public class LoginActivity extends AppCompatActivity {
                 loginAct();
             }
         });
+
+        TextView tvCopyright = (TextView)findViewById(R.id.copyright);
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        tvCopyright.setText("@"+year+" PT. Aplikanusa Lintasarta");
     }
 
     void loginAct() {
         String username = etUsername.getText().toString();
-        String password = etPassword.getText().toString();
+        String password = (etPassword.getText().toString());
 
         if(TextUtils.isEmpty(username)) {
             etUsername.setError("Username cannot be empty!");
