@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorHint"
                 android:drawableRight="@drawable/ic_user"
+                android:textColor="@color/colorHint"
                 android:hint="@string/user"
                 android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
@@ -54,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorHint"
                 android:drawableRight="@drawable/ic_pass"
+                android:textColor="@color/colorHint"
                 android:hint="@string/password"
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>

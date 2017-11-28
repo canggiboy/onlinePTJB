@@ -1,8 +1,11 @@
 package ikhsan.com.ptjblintasarta;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
@@ -20,6 +23,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import java.util.List;
+
+import ikhsan.com.ptjblintasarta.Util.PrefUtil;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -72,7 +77,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            PrefUtil.clear(MainActivity.this);
+                            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                            startActivity(i);
                         }
 
                     })
