@@ -19,7 +19,7 @@ public class LoginService {
                 .create(LoginInterface.class);
     }
 
-    public void doLogin(String username, String password, Callback callback) {
-        loginInterface.login(username, password).enqueue(callback);
+    public void doLogin(String username, String password, String level, Callback callback) {
+        loginInterface.login(username, password, level).enqueue(callback);
     }
 }

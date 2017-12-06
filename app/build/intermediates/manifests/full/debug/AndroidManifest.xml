@@ -29,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="ikhsan.com.ptjblintasarta.ApproveActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

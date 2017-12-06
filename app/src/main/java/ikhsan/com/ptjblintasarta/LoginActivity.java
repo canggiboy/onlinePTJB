@@ -61,7 +61,8 @@ public class LoginActivity extends AppCompatActivity {
 
     void loginAct() {
         String username = etUsername.getText().toString();
-        String password = (etPassword.getText().toString());
+        String password = etPassword.getText().toString();
+        String level = etPassword.getText().toString();
 
         if(TextUtils.isEmpty(username)) {
             etUsername.setError("Username cannot be empty!");
@@ -74,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         loginService = new LoginService(this);
-        loginService.doLogin(username, password, new Callback() {
+        loginService.doLogin(username, password, level, new Callback() {
             @Override
             public void onResponse(Call call, Response response) {
                 User user = (User) response.body();

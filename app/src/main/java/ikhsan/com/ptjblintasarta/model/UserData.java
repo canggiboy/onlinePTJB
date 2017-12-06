@@ -9,6 +9,7 @@ public class UserData {
     private String nik;
     private String fullname;
     private String username;
+    private String level;
 
     public UserData() {
     }
@@ -35,5 +36,13 @@ public class UserData {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String geLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }

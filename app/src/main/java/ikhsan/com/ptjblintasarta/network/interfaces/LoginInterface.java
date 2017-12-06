@@ -17,5 +17,6 @@ public interface LoginInterface {
     @POST(Config.API_LOGIN)
     Call<User> login(
             @Field("username") String username,
-            @Field("password") String password);
+            @Field("password") String password,
+            @Field("password") String level);
 }

@@ -78,25 +78,20 @@
                 android:textSize="14sp"/>
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.AppCompatTextView
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:text="Transaction"
-            android:textColor="@color/grey_500"/>
+            android:layout_marginTop="10dp">
 
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/transaction"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:spinnerMode="dropdown"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:layout_margin="5dp"
-            android:background="@color/grey_900"/>
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etTDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/date"
+                android:textSize="14sp"/>
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 </LinearLayout>

@@ -5,7 +5,7 @@ package ikhsan.com.ptjblintasarta.network.config;
  */
 
 public class Config {
-    public static final String BASE_URL = "http://192.168.0.101/"; // Your Local IP Address or Localhost (http://10.0.2.2/)
+    public static final String BASE_URL = "http://192.168.0.103/"; // Your Local IP Address or Localhost (http://10.0.2.2/)
 
     public static final String API_URL = BASE_URL + "Pjb_Lintasarta/pjb/android/";
 

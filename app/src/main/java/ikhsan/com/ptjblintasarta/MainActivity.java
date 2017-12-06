@@ -1,11 +1,9 @@
 package ikhsan.com.ptjblintasarta;
 
 import android.app.AlertDialog;
-import android.content.Context;
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
@@ -15,14 +13,17 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 import ikhsan.com.ptjblintasarta.Util.PrefUtil;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             PrefUtil.clear(MainActivity.this);
                             Intent i = new Intent(MainActivity.this, LoginActivity.class);
                             startActivity(i);
+                            finish();
                         }
 
                     })
